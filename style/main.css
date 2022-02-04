@@ -1,0 +1,336 @@
+:root {
+  --primary-color: #242738;
+  --secondary-color: #17c2b9;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 4vw 0 4vw;
+}
+
+header {
+  width: 100vw;
+  height: 55vh;
+  background-image: url(/img/header.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  color: white;
+}
+
+header .header-title {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: calc(100% - 60px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 3;
+  text-align: center;
+  font-size: 20px;
+}
+
+header .header-title h1 {
+  font-size: 3em;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+header nav {
+  background-color: var(--primary-color);
+  z-index: 10;
+}
+
+header nav .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 60px;
+  z-index: 10;
+}
+
+header nav .nav-container .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .nav-container h1 {
+  margin: 0;
+  font-weight: 600;
+}
+
+header nav .nav-container .nav-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+header nav .nav-container .nav-content li {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+header nav .nav-container .nav-content li a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav .nav-container .nav-content li a:hover {
+  color: var(--secondary-color);
+}
+
+section {
+  font-size: 20px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.85);
+  width: 100vw;
+  padding: 4em 0 4em 0;
+}
+
+section h1,
+section h2,
+section p {
+  margin: 0;
+}
+
+section h1,
+section h2, section h3 {
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+section:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+section:nth-child(even) {
+  background-color: #e0e0e0;
+}
+
+.sec-text-small {
+  text-align: center;
+}
+
+.sec-text-small h2 {
+  font-size: 1.8em;
+}
+
+.sec-text-small p {
+  font-size: 1.1em;
+}
+
+.sec-text-large h2 {
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.sec-text-large p {
+  max-width: 80%;
+  margin: auto;
+  font-size: 1em;
+  margin-bottom: 1.1em;
+}
+
+.sec-text-large p:last-child {
+  margin-bottom: 0;
+}
+
+.sec-text-heading {
+  text-align: center;
+}
+
+.sec-text-heading h2 {
+  font-size: 1.8em;
+  margin-bottom: 50px;
+}
+
+.sec-img-text .pair {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 100%;
+  grid-gap: 1em;
+  padding-top: 2em;
+}
+
+.sec-img-text .pair:last-child {
+  padding-bottom: 2em;
+}
+
+.sec-img-text .pair:nth-child(even) .grid-item.image {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.sec-img-text .pair.pair:nth-child(even) .grid-item.text {
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+.sec-img-text img {
+  width: 100%;
+  height: 100%;
+}
+
+.sec-img-text .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em;
+}
+
+.sec-grid .item-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4em;
+}
+
+.sec-grid .item-grid .item h3 {
+  border-left: 7px solid var(--secondary-color);
+  padding-left: 10px;
+}
+
+.sec-grid .item-grid .item p {
+  font-weight: 400;
+  font-size: 0.8em;
+  text-align: justify;
+}
+
+.sec-footer {
+  background-color: var(--primary-color) !important;
+  color: white;
+}
+
+.sec-footer .footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sec-footer .footer-content .links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sec-footer .footer-content .links li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.sec-footer .footer-content .links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.sec-footer .footer-content .links li a i {
+  color: white;
+  width: 65px;
+  height: 65px;
+  border: 2px solid white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 65px;
+  font-size: 1.5em;
+}
+
+.sec-footer .footer-content .website-info {
+  font-size: 0.8em;
+  text-align: end;
+}
+
+.sec-footer .footer-content .website-info a {
+  color: #8bcbff;
+  text-decoration: none;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #1745c2;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+.btn-standard {
+  background-color: var(--secondary-color);
+}
+
+@media screen and (max-width: 768px) {
+  header nav {
+    font-size: 10px;
+  }
+  header nav .btn {
+    display: none;
+  }
+  header .header-title {
+    font-size: 16px;
+  }
+  .sec-img-text .pair {
+    display: block;
+  }
+  .sec-grid > .item-grid {
+    padding: 1em;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .sec-footer .footer-content {
+    padding: 1em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
